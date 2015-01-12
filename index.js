@@ -38,7 +38,7 @@ IW.prototype.disconnect = function() {
 }
 
 IW.prototype.scan = function (cb) {
-    var ps = spawn('iwlist', [ this.iface, 'scan' ]);
+    var ps = spawn('sudo iwlist', [ this.iface, 'scan' ]);
     
     var line = '';
     ps.stdout.on('data', function ondata (buf) {
